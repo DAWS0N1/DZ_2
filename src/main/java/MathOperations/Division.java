@@ -13,6 +13,6 @@ public class Division {
         float answer = first / second;
 
         //вывод в консоль отформатированного ответа, до 10 символов с округлением до 4-х цифр после запятой
-        System.out.printf("Произведение равно:" + "%10.4f", answer);
+        System.out.printf("Частное равно:" + "%10.4f", answer);
     }
 }

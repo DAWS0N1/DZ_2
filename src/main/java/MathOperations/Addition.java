@@ -13,6 +13,6 @@ public class Addition {
         float answer = first + second;
 
         //вывод в консоль отформатированного ответа, до 10 символов с округлением до 4-х цифр после запятой
-        System.out.printf("Произведение равно:" + "%10.4f", answer);
+        System.out.printf("Сумма равна:" + "%10.4f", answer);
     }
 }

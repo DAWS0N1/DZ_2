@@ -1,4 +1,7 @@
-import MathOperations.*;
+import MathOperations.Addition;
+import MathOperations.Division;
+import MathOperations.Multiplication;
+import MathOperations.Subtraction;
 
 import java.util.Scanner;
 
@@ -11,7 +14,7 @@ import java.util.Scanner;
  */
 public class Calculator {
 
-    public static void main(String[] args) {
+    public Calculator() {
         Scanner scanner = new Scanner(System.in);
 
         System.out.println("Введите первое число:");
@@ -19,21 +22,22 @@ public class Calculator {
         System.out.println("Введите второе число:");
         float second = scanner.nextFloat();
 
-        System.out.println("Выберите оператор (Умножение | Сложение | Деление | Вычитание)");
+        System.out.println("Выберите оператор ('*' | '+' | '/' | '-')");
         String operator = scanner.next();
 
         // условия для выбора оператора калькулятора
-        if (operator.equalsIgnoreCase("Умножение")) {
+        if (operator.equals("*")) {
             new Multiplication(first, second); // вызов класса умножения
         }
-        else if (operator.equalsIgnoreCase("Сложение")) {
+        else if (operator.equals("+")) {
             new Addition(first, second); //  вызов класса сложения
         }
-        else if (operator.equalsIgnoreCase("Деление")) {
+        else if (operator.equals("/")) {
             new Division(first, second); // вызов класса деления
         }
-        else if (operator.equalsIgnoreCase("Вычитание")) {
+        else if (operator.equals("-")) {
             new Subtraction(first, second); // вызов класса вычитание
-        }
+        } else
+            System.out.println("Неверный оператор");
     }
 }

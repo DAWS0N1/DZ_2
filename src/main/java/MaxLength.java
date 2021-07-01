@@ -1,13 +1,7 @@
 import java.util.Scanner;
 
 public class MaxLength {
-    /**
-     * Программа поиска самого длинного слова,
-     * считает по 4 основным математическим операциям
-     *
-     * @author Геворгян Ара
-     * @version 1.0
-     */
+
     public MaxLength() {
         Scanner scanner = new Scanner(System.in);
 
@@ -16,12 +10,17 @@ public class MaxLength {
 
         String[] arrayString = new String[lengthInt];
         String max = "";
+        String maxLength = "";
 
         for (int i = 0; i<lengthInt; i++) {
             System.out.println("Введите " + (i+1) + " слово:");
             arrayString[i] = scanner.next();
-            if (arrayString[i].length() > max.length())
+            if (arrayString[i].length() > maxLength.length()) {
                 max = arrayString[i];
+                maxLength = arrayString[i];
+            } else if (arrayString[i].length() == maxLength.length()) {
+                max += ", " + arrayString[i];
+            }
         }
 
         System.out.println("Самое длинное слово: " + max);
